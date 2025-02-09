@@ -1,0 +1,24 @@
+{% extends 'kampus/navbar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<body>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1>HAPUS DATA</h1>
+        <form method="post" autocapitalize="off">
+            {% csrf_token %} 
+            <p>Apakah kamu mau menghapus data ini?</p>
+
+            <button type="submit" class="btn btn-secondary btn-lg w-100 btn-block p-5">Hapus Data</button>
+            <br><br>
+            <a class="text-center" href="{% url '' %}"> Kembali</a>
+
+        </form>
+        
+    </div>
+    </div>
+</body>
+
+
+
+{% endblock content %}

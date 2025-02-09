@@ -1,0 +1,22 @@
+{% extends 'kampus/navbar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<body>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1>BUAT DATA</h1>
+        <form method="post" autocapitalize="off">
+            {% csrf_token %} 
+            {{CreateMahasiswaForm|crispy}}
+
+            <button type="submit" class="btn btn-secondary btn-lg w-100 btn-block p-5">Buat Data</button>
+
+        </form>
+        
+    </div>
+    </div>
+</body>
+
+
+
+{% endblock content %}
